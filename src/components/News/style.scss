@@ -1,0 +1,182 @@
+@import "../../styles/index.scss";
+#news {
+  margin-bottom: spacing(5);
+  .backgroundTop {
+    padding-top: 120px;
+    background: url(../../assets/images/movieschedule/back-news.png);
+    background-size: 100%;
+    background-repeat: no-repeat;
+  }
+  .news__tab {
+    justify-content: center;
+    margin-bottom: spacing(2);
+    margin-top: spacing(-1.5);
+    border-bottom: none;
+    .nav-link {
+      border: none;
+      @include text(color("black"), fontSize(2.5), $fwMedium);
+      line-height: 30px;
+      @include transition-all($time: 0.2s);
+      &:hover {
+        font-size: fontSize(3);
+      }
+      &.active {
+        background-color: transparent;
+        color: color("secondary");
+        font-size: fontSize(3);
+        border: none;
+      }
+    }
+  }
+  .btn-default {
+    background-color: color("lightwhite");
+    border: 1px solid color("lightgrey");
+    color: #9b9b9b;
+
+    &:hover {
+      background-color: color("primary");
+      border-color: color("primary");
+      color: color("white");
+      text-decoration: none;
+    }
+  }
+  .tab-pane {
+    .news {
+      padding: spacing(0, 1.5);
+      &__link {
+        color: color("black");
+        text-decoration: none;
+        &:hover {
+          color: color("primary");
+          transition: color 0.2s;
+        }
+        &__title {
+          display: -webkit-box;
+          -webkit-line-clamp: 2;
+          -webkit-box-orient: vertical;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          line-height: 20px;
+          font-family: "SF Medium";
+          height: 42px;
+          font-size: $h1;
+          font-weight: $fwMedium;
+          margin: spacing(1) 0 spacing(0.5) 0;
+        }
+      }
+      &__description {
+        @include text(color("blackgrey"), $title3, $fwRegular);
+        text-align: justify;
+        line-height: 19px;
+        padding: 0 5px 0 0;
+        margin-bottom: spacing(1.5);
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        height: 55px;
+        margin-bottom: 15px;
+      }
+    }
+    .news:nth-child(8n + 1),
+    .news:nth-child(8n + 2) {
+      margin-bottom: spacing(2);
+      .news__image {
+        height: unset;
+        padding-top: 55%;
+        position: relative;
+        img {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          @include bd-radius(4px);
+          @include transition-all(0.2s);
+        }
+      }
+      &.col-news {
+        width: 50%;
+      }
+    }
+    .news:nth-child(8n + 3),
+    .news:nth-child(8n + 4) {
+      margin-bottom: spacing(2);
+      .news__image {
+        height: unset;
+        padding-top: 50%;
+        position: relative;
+        img {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          @include bd-radius(4px);
+          @include transition-all(0.2s);
+        }
+      }
+      &.col-news {
+        width: 33.33333333%;
+      }
+    }
+    .news:nth-child(8n + 5) {
+      margin-bottom: spacing(2);
+      height: 60px;
+      .news {
+        &__image {
+          height: 50px;
+          width: 50px;
+          float: left;
+          margin-right: 10px;
+          cursor: pointer;
+          overflow: hidden;
+          @include bd-radius(4px);
+
+          background-color: color("lightwhite");
+          position: relative;
+          img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            @include bd-radius(4px);
+            @include transition-all(0.2s);
+          }
+        }
+        &__link__title {
+          float: left;
+          width: calc(100% - 70px);
+          opacity: 0.7;
+          font-family: "SF Regular";
+        }
+      }
+      &.col-news {
+        width: 33.33333333%;
+      }
+    }
+  }
+}
+
+@include MediaQuery($sm) {
+  #news {
+    .tab-pane {
+      .news {
+        &__link {
+          &__title {
+            font-size: $body;
+          }
+        }
+      }
+    }
+    .news__tab {
+      .nav-link {
+        font-size: fontSize(2);
+        &.active {
+          font-size: fontSize(2.4);
+        }
+      }
+    }
+  }
+}

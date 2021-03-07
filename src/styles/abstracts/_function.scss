@@ -1,0 +1,16 @@
+@function color($color) {
+  @if map-has-key($colors, $color) {
+    @return map-get($colors, $color);
+  }
+}
+
+@function spacing($x, $y: null) {
+  @if ($y == null) {
+    @return $x * $spacing;
+  }
+  @return $x * $spacing $y * $spacing;
+}
+
+@function fontSize($value) {
+  @return $base * $value;
+}

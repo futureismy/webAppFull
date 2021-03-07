@@ -1,0 +1,292 @@
+@import "../../styles/index.scss";
+.DetailCheckout {
+  background-color: #fff;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+  // z-index: 3;
+  // max-width: 440px;
+  height: 100%;
+  font-family: "SF Regular";
+  padding-right: 0;
+
+  &__all {
+    padding: 0 40px;
+
+    .row {
+      margin-left: 0;
+      margin-right: 0;
+    }
+
+    &__totalCost {
+      position: relative;
+      border-bottom: 1px dashed #e9e9e9;
+      height: 80px;
+      margin-bottom: 15px;
+      text-align: center;
+      font-size: 36px;
+      font-family: "SF Medium";
+      color: #44c020 !important;
+      p {
+        width: 300px;
+        text-align: center;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate3d(-50%, -50%, 0);
+      }
+    }
+
+    &__filmName {
+      border-bottom: 1px dashed #e9e9e9;
+      padding-bottom: 12.5px;
+      font-family: "SF Medium";
+      font-size: 16px;
+      .ageType {
+        background-color: #fb4226;
+        color: #fff;
+        border-radius: 4px;
+        padding: 0 5px;
+        float: left;
+        margin-right: 5px;
+        font-size: 12px;
+        vertical-align: 2px;
+        min-width: 33px;
+        text-align: center;
+      }
+      .tenPhim {
+        font-weight: bold;
+      }
+      .infoCinema {
+        margin-top: 5px;
+        font-family: "SF Regular";
+        font-size: 14px;
+      }
+    }
+
+    &__chair {
+      border-bottom: 1px dashed #e9e9e9;
+      padding-bottom: 12.5px;
+      padding-top: 12.5px;
+      margin-bottom: 12.5px;
+      font-size: 14px;
+      .col-sm-7 {
+        width: 58.3%;
+      }
+      .col-sm-5 {
+        width: 41.67%;
+      }
+      .isPlaced {
+        padding-left: 0;
+        &__title {
+          color: #fb4226;
+        }
+        &__show {
+          color: #fb4226;
+          font-size: 14px;
+        }
+      }
+      &__total {
+        font-family: "SF Medium";
+        text-align: right;
+        color: #44c020 !important;
+        font-size: 16px;
+        padding: 0 15px;
+      }
+    }
+
+    &__infouser {
+      border-bottom: 1px dashed #e9e9e9;
+      padding-bottom: 12.5px;
+      padding-top: 12.5px;
+      margin-bottom: 12.5px;
+      position: relative;
+      input {
+        border: 0;
+        width: calc(100% - 16px);
+        padding-right: 5px;
+        padding-left: 0;
+        &:invalid {
+          outline: none;
+          box-shadow: none;
+        }
+        &:valid,
+        &:focus {
+          & ~ label {
+            top: -5px;
+            font-size: 12px;
+            color: #1e90ff;
+          }
+        }
+        &:focus {
+          outline: none;
+          // padding: 5px 0;
+        }
+      }
+      label {
+        color: #9b9b9b;
+        font-size: 16px;
+        position: absolute;
+        transition: 0.3s ease all;
+        -moz-transition: 0.3s ease all;
+        -webkit-transition: 0.3s ease all;
+        pointer-events: none;
+        cursor: text;
+        top: 0;
+        left: 0;
+        z-index: 1;
+        margin: 0;
+      }
+    }
+
+    &__voucher {
+      border-bottom: 1px dashed #e9e9e9;
+      padding-bottom: 12.5px;
+      padding-top: 12.5px;
+      margin-bottom: 12.5px;
+      position: relative;
+      .row {
+        display: grid;
+        grid-template-columns: 80% 20%;
+      }
+      .voucherCheckout {
+        border: 0;
+        width: calc(100% - 16px);
+        padding-right: 5px;
+        padding-left: 0;
+        &:invalid {
+          outline: none;
+          box-shadow: none;
+        }
+        &:focus {
+          & ~ .labelVoucher {
+            color: #1e90ff;
+          }
+        }
+        &:focus {
+          outline: none;
+        }
+      }
+      .labelVoucher {
+        color: #9b9b9b;
+        font-size: 12px;
+        position: absolute;
+        transition: 0.3s ease all;
+        -moz-transition: 0.3s ease all;
+        -webkit-transition: 0.3s ease all;
+        pointer-events: none;
+        cursor: text;
+        top: -5px;
+        left: 0;
+        z-index: 1;
+        margin: 0;
+      }
+      .applyVoucher {
+        cursor: pointer;
+        p {
+          background-color: #afafaf;
+          pointer-events: none;
+          font-size: 13px;
+          font-weight: 300;
+          color: #fff;
+          border-radius: 6px;
+          padding: 5px 7px;
+          top: 5px;
+          text-align: center;
+        }
+      }
+    }
+
+    &__methodPay {
+      margin-bottom: 40%;
+      .methodPay__title {
+        margin-bottom: 5px;
+      }
+      .methodPay__requiredBooking {
+        color: #fb4226;
+        padding: 5px 0;
+        font-size: 13px;
+        // font-family: "SF Regular";
+        cursor: pointer;
+      }
+    }
+
+    &__notice {
+      padding-left: 40px;
+      padding-right: 40px;
+      padding-bottom: 4%;
+      // position: absolute;
+      // left: 0;
+      // right: 0;
+      bottom: 60px;
+      margin-right: 4px;
+      background-color: #fff;
+      text-align: center;
+      z-index: 2;
+      img {
+        margin-right: 8px;
+        width: 16px;
+        height: 16px;
+      }
+      .notice__title {
+        font-size: 14px;
+        color: #4a4a4a;
+        & > span {
+          color: #f79320;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+
+  &__buyTicket,
+  &__buyTicketactive {
+    background-color: #afafaf;
+    background-image: none;
+    cursor: initial;
+    position: absolute;
+    bottom: 0;
+    left: inherit;
+    width: 100%;
+
+    height: 60px;
+    font-size: 24px;
+    text-align: center;
+
+    button {
+      width: 100%;
+      padding: 10px 0;
+      background: transparent;
+      outline: none !important;
+      border: none;
+      color: #e9e9e9;
+    }
+  }
+  &__buyTicketactive {
+    background-color: yellowgreen;
+  }
+}
+
+@include MediaQuery($lg) {
+  .DetailCheckout {
+    height: 600px;
+    max-width: 100%;
+    &__all {
+      max-width: 100%;
+      height: 600px;
+    }
+    &__all__notice {
+      display: none;
+    }
+  }
+}
+@include MediaQuery($sm) {
+  .DetailCheckout {
+    height: 500px;
+
+    &__all {
+      height: 500px;
+    }
+    .methodPay__requiredBooking {
+      display: none;
+    }
+  }
+}

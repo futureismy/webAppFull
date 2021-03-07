@@ -1,0 +1,186 @@
+@import "../../styles/index.scss";
+
+.schedule__mobile {
+  &__wrapper {
+    display: block;
+    color: color("black");
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    position: relative;
+    padding: spacing(2) 0;
+
+    &:hover {
+      text-decoration: none;
+      color: color("black");
+    }
+
+    img {
+      width: 50px;
+      height: 50px;
+      margin-right: spacing(1.5);
+    }
+    .arrow {
+      position: absolute;
+      top: 50%;
+      right: 14px;
+      width: 15px;
+      height: 15px;
+      transform: translateY(-50%) rotate(0deg);
+      @include transition-all;
+      &.expand {
+        transform: rotate(90deg);
+      }
+    }
+  }
+
+  &__title {
+    font-size: fontSize(2.2);
+    margin-bottom: 0;
+
+    .subscription {
+      display: block;
+      @include text(color("primary"), $title2, $fwRegular);
+      margin: 0;
+    }
+  }
+
+  .line {
+    height: 1px;
+    margin: 0 spacing(-1.5);
+    background-color: color("lightwhite");
+  }
+
+  &__list {
+    @include list-default;
+    margin-top: spacing(1);
+
+    .image {
+      width: 50px;
+      margin-right: spacing(1);
+    }
+
+    .content {
+      width: calc(100% - 60px);
+
+      .title {
+        color: color("black");
+        font-size: $h1;
+      }
+
+      .desc {
+        font-size: $title3;
+        color: color("lightgrey");
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+      }
+    }
+  }
+  &__child {
+    padding: spacing(1) 0;
+    &:hover {
+      span {
+        color: color("primary");
+      }
+      .btn-age {
+        color: white;
+      }
+    }
+  }
+
+  &__link {
+    display: block;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: color("black");
+    margin-bottom: spacing(1);
+
+    &:hover {
+      text-decoration: none;
+      color: color("black");
+    }
+  }
+  &__movie {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    padding-top: spacing(2);
+    padding-bottom: spacing(2);
+
+    &::before {
+      background-color: color("lightwhite");
+      position: absolute;
+      content: "";
+      top: initial;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      width: calc(100% - 30px);
+      height: 1px;
+      margin: 0 auto;
+    }
+
+    .image {
+      width: 50px;
+      margin-right: spacing(1);
+      img {
+        width: 50px;
+        height: 50px;
+      }
+    }
+
+    .content {
+      width: calc(100% - 60px);
+
+      .title {
+        color: color("black");
+        margin-bottom: spacing(0.5);
+      }
+
+      .desc {
+        font-size: $title1;
+        color: color("lightgrey");
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+      }
+    }
+
+    .digital {
+      @include text(color("black"), $body, $fwMedium);
+      margin-bottom: spacing(2);
+    }
+  }
+  &__showtimes {
+    width: 100%;
+
+    .btn-default {
+      background-color: color("lightwhite");
+      border: 1px solid color("lightwhite");
+      color: color("lightgrey");
+      display: inline-block;
+      text-decoration: none;
+      margin-right: spacing(1);
+      margin-bottom: spacing(1);
+
+      span {
+        @include text(color("darkgreen"), $body, $fwMedium);
+      }
+
+      &:hover {
+        span {
+          color: color("primary");
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 993px) {
+  .schedule__mobile {
+    display: none;
+  }
+}

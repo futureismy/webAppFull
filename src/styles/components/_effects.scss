@@ -1,0 +1,4 @@
+@include animation-transform(FadeDown, translateY(-100px), translateY(0));
+@include animation-transform(FadeUp, translateY(100px), translateY(0));
+@include animation-rotate3d(Rotate3d, scale3d(1,1,1), scale3d(1.1,1.1,1.1) rotate3d(0,0,1,7deg), scale3d(1.1,1.1,1.1) rotate3d(0,0,1,-7deg), scale3d(1,1,1));
+@include animation-opacity(Opacity, 1, 0.1);

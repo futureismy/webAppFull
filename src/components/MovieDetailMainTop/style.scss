@@ -1,0 +1,41 @@
+@import "../../styles/index.scss";
+.movie__detail__top {
+  box-sizing: border-box;
+  position: relative;
+  img.movie__detail__top__bg {
+    width: calc(100% + 10px);
+    margin: -5px -5px 10px -5px;
+    max-height: 780px;
+    filter: blur(5px);
+  }
+
+  &__styleGradient,
+  &__info,
+  &__blurred {
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+  }
+
+  &__content {
+    position: relative;
+  }
+
+  &__styleGradient {
+    background: linear-gradient(to top, rgb(10, 32, 41), transparent 100%);
+  }
+}
+
+@include MediaQuery($sm) {
+  .movie__detail__top {
+    &__bg {
+      filter: none !important;
+    }
+    &__blurred {
+      display: none;
+    }
+  }
+  position: relative;
+}

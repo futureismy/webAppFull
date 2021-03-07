@@ -1,0 +1,14 @@
+@import "../../styles/index.scss";
+
+.movie__detail_information_title {
+    margin: spacing(5) spacing(0);
+
+ p{
+    @include text(color("white"), $body, $fwMedium);
+
+ }
+ span{
+     
+    @include text(color("white"), $body, $fwRegular);
+ }
+}

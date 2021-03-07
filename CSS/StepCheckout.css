@@ -1,0 +1,62 @@
+.StepCheckout {
+  grid-area: StepCheckout;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 75% 25%;
+      grid-template-columns: 75% 25%;
+  width: 1440px;
+  height: 80px;
+  font-size: 14px;
+  background-color: #fff;
+  -webkit-box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+          box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+}
+
+.StepCheckout__step ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 50%;
+  padding-left: 40px;
+  height: 80px;
+  margin: 0;
+}
+
+.StepCheckout__step ul li {
+  list-style-type: none;
+  padding: 0 30px;
+  line-height: 80px;
+  color: #333;
+}
+
+.StepCheckout__step ul li span:nth-child(1) {
+  font-size: 18px;
+  margin-right: 5px;
+}
+
+.StepCheckout__step ul li.active {
+  color: #f00;
+  border-top: 5px solid #f00;
+}
+
+.StepCheckout__account {
+  line-height: 80px;
+  cursor: pointer;
+}
+
+.StepCheckout__account p {
+  width: 120px;
+  margin: 0 50%;
+  color: #9b9b9b;
+}
+
+.StepCheckout__account p img {
+  margin-right: 5px;
+  height: 30px;
+  border: none;
+  border-radius: 25px;
+}
+/*# sourceMappingURL=StepCheckout.css.map */

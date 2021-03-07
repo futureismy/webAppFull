@@ -1,0 +1,24 @@
+.LeftCheckout {
+  grid-area: LeftCheckout;
+  min-height: calc(100% - 80px);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  top: 80px;
+  float: left;
+  width: 26%;
+  position: fixed;
+  z-index: 1;
+  left: -22%;
+}
+
+.LeftCheckout__modalleft {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: #000;
+  opacity: 0.7;
+}
+/*# sourceMappingURL=LeftCheckout.css.map */

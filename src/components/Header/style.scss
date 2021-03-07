@@ -1,0 +1,249 @@
+@import "../../styles/index.scss";
+
+#header {
+  background-color: rgba(255, 255, 255, 0.9);
+  position: sticky;
+  top: 0;
+  z-index: 9999;
+
+  .header {
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: spacing(0.5, 1.5);
+    box-shadow: 0 0 15px rgba(color("black"), 0.3);
+
+    &__logo {
+      width: 50px;
+      cursor: pointer;
+    }
+
+    &__navbar {
+      flex-grow: 1;
+
+      .toggle-button {
+        background-image: url(../../assets/images/logos/menu-options.png);
+        background-size: cover;
+        background-repeat: no-repeat;
+        display: none;
+        position: absolute;
+        top: 20px;
+        right: 16px;
+        height: 20px;
+        width: 30px;
+      }
+    }
+
+    &__nav {
+      @include list-default;
+      display: flex;
+      justify-content: center;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      @include transform(translate(-50%, -50%));
+
+      a {
+        cursor: pointer;
+      }
+
+      .active {
+        &:hover {
+          text-decoration: none;
+        }
+      }
+
+      &__link {
+        color: color("black");
+        padding: spacing(0, 1);
+
+        &:hover,
+        &:focus {
+          color: color("primary");
+          text-decoration: none;
+        }
+      }
+    }
+
+    &__login {
+      display: flex;
+      .dangKi{
+        cursor: pointer;
+        transition: .1s;
+        margin-top: 1px;
+        &:hover{
+          color:red
+        }
+      }
+      .loGin{
+        transition: .1s;
+        &:hover{
+          color:red
+        }
+      }
+      
+      &__link {
+        position: relative;
+        padding-right: spacing(0.5);
+
+        &::after {
+          position: absolute;
+          top: 0;
+          right: 0;
+          content: "";
+          display: inline-block;
+          width: 1px;
+          height: 100%;
+          background-color: color("lightwhite");
+        }
+      }
+    }
+
+    &__login,
+    &__mobile__login {
+      padding-right: spacing(1);
+      margin-right: spacing(1);
+      display: flex;
+      img {
+        width: 30px;
+        margin-right: spacing(0.5);
+        @include bd-radius(50%);
+      }
+
+      a {
+        color: color("lightgrey");
+        text-decoration: none;
+
+        &:hover {
+          text-decoration: none;
+        }
+      }
+    }
+    &__logout {
+      list-style: none;
+      padding-left: spacing(0.5);
+      color: color("lightgrey");
+    }
+
+    &__mobile {
+      opacity: 0;
+      &__list {
+        @include list-default;
+      }
+      &__linklist {
+        &__item {
+          display: block;
+          padding: spacing(0.8, 0);
+          &:hover {
+            text-decoration: none;
+            color: color("primary");
+          }
+        }
+      }
+    }
+  }
+}
+
+@include MediaQuery($md) {
+  #header {
+    .header {
+      flex-direction: column;
+      align-items: flex-start;
+
+      .toggle-button {
+        display: block;
+      }
+
+      &__nav {
+        display: none;
+      }
+
+      &__login {
+        display: none;
+      }
+
+      &__mobile {
+        opacity: 1;
+
+        &.modal.right {
+          .modal-dialog {
+            position: fixed;
+            margin: auto;
+            width: 70%;
+            height: 100%;
+            @include transform(translate3d(0%, 0, 0));
+          }
+
+          .modal-content {
+            height: 100%;
+            overflow: hidden;
+            overflow-y: auto;
+          }
+
+          &.fade {
+            .modal-dialog {
+              right: -70%;
+              @include transition-all;
+            }
+
+            &.in {
+              .modal-dialog {
+                right: 0;
+              }
+            }
+          }
+        }
+
+        &__login {
+          padding-top: spacing(3);
+          font-size: fontSize(2);
+          position: relative;
+
+          &::after {
+            content: "";
+            position: absolute;
+            top: 60%;
+            right: 0;
+            width: 15px;
+            height: 15px;
+            background-image: url(../../assets/images/logos/next-session.png);
+            background-repeat: no-repeat;
+            background-size: cover;
+          }
+        }
+
+        &__list {
+          display: flex;
+          flex-direction: column;
+          padding: 0;
+
+          a {
+            cursor: pointer;
+            color: color("black");
+          }
+
+          .active {
+            color: color("black");
+          }
+        }
+
+        &__link {
+          display: block;
+          padding: spacing(2, 0);
+          font-size: fontSize(2);
+          font-weight: $fwRegular;
+          &:nth-child(5) {
+            a {
+              &:hover {
+                text-decoration: none;
+              }
+            }
+            padding: spacing(2) 0 spacing(0.5) 0;
+          }
+        }
+      }
+    }
+  }
+}

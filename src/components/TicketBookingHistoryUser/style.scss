@@ -1,0 +1,57 @@
+@import "../../styles/index.scss";
+.tiket__booking__history {
+  background-color: #ddbea9;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  h4 {
+    @include text(#774936, $h2, $fwMedium);
+    text-transform: uppercase;
+  }
+
+  &__content {
+    width: 80%;
+    height: 600px;
+    background-color: #c9ada7;
+    border-radius: 5px;
+    & {
+      /* width */
+      ::-webkit-scrollbar {
+        width: 5px;
+        height: 5px;
+      }
+
+      /* Track */
+      ::-webkit-scrollbar-track {
+        background: #f1f1f1;
+      }
+
+      /* Handle */
+      ::-webkit-scrollbar-thumb {
+        background: rgba(color("darkergrey"), $alpha: 0.2);
+      }
+
+      /* Handle on hover */
+      ::-webkit-scrollbar-thumb:hover {
+        background: rgba(color("darkergrey"), $alpha: 0.4);
+      }
+    }
+    &__table {
+      height: 550px;
+      overflow-y: auto;
+    }
+  }
+
+  tr.child {
+    display: none;
+    &.open {
+      display: table-row;
+    }
+  }
+  tr.parent {
+    display: table-row;
+  }
+}

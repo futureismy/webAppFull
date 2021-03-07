@@ -1,0 +1,141 @@
+@import "../../styles/index.scss";
+.mvshowtime {
+  &__image {
+    padding-top: 147%;
+    @include bd-radius(4px);
+    position: relative;
+    &::after {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-image: linear-gradient(
+        to top,
+        color("black"),
+        transparent 100%
+      );
+      opacity: 0;
+      @include transition-all;
+    }
+    &:hover {
+      &::after {
+        opacity: 1;
+      }
+    }
+  }
+  &__overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(to top, color("black"), transparent 100%);
+    opacity: 0;
+    @include transition-all;
+    .btn-play {
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+  &__rating {
+    position: absolute;
+    top: 5%;
+    right: 5%;
+    width: 50%;
+    padding: spacing(0.5);
+    font-size: 16.08px;
+    background-color: rgba(0, 0, 0, 0.6);
+    border: 1px solid rgba(0, 0, 0, 0.65);
+    @include bd-radius(4px);
+    @include text(color("primary"), $body, $fwRegular);
+    text-align: center;
+    line-height: 1.1;
+  }
+  &__card {
+    &.card {
+      border: none;
+    }
+
+    margin-bottom: spacing(1);
+    &:hover {
+      .mvshowtime__overlay {
+        opacity: 1;
+      }
+      .mvshowtime__content__overlay {
+        opacity: 0;
+      }
+      .mvshowtime__addToCart {
+        opacity: 1;
+      }
+    }
+    &__body {
+      position: relative;
+    }
+  }
+  &__content {
+    opacity: 1;
+  }
+
+  &__title {
+    margin-bottom: spacing(1);
+    height: 42px;
+    max-height: 42px;
+    overflow: hidden;
+    @include text(color("black"), $h1, $fwMedium);
+    line-height: 18px;
+    @include transition-all(0.2s);
+    .btn-age--general {
+      background-color: color("darkgreen");
+    }
+  }
+  &__addToCart {
+    position: absolute;
+    top: 10px;
+    left: 0;
+    background-color: #fff;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    opacity: 0;
+    @include transition-all;
+    a {
+      display: inline-block;
+      width: 100%;
+      padding: spacing(1.5, 0);
+      margin-top: spacing(1);
+      @include text(color("white"), fontSize(2), $fwRegular);
+      text-align: center;
+      text-decoration: none;
+
+      &:hover {
+        text-decoration: none;
+        color: color("white");
+      }
+    }
+  }
+}
+
+@include MediaQuery($xs) {
+  .mvshowtime {
+    &__image {
+      padding-top: 50%;
+      margin-bottom: spacing(1.5);
+    }
+    &__overlay {
+      display: none;
+    }
+    &__rating {
+      width: 20%;
+      font-size: $title1;
+      padding: spacing(0.8, 0);
+    }
+    &__card {
+      &__body {
+        display: none;
+      }
+    }
+  }
+}

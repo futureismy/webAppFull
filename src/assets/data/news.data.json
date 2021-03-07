@@ -1,0 +1,200 @@
+[
+  {
+    "id": "dien-anh",
+    "nameTab": "dien-anh",
+    "newsList": [
+      {
+        "image": "da-n-my-nhan-trong-the-gio-i-die-n-a-nh-cu-a-qua-i-kie-t-christopher-nolan-15970503918450.jpg",
+        "title": "Dàn mỹ nhân trong thế giới điện ảnh của quái kiệt Christopher Nolan",
+        "description": "Làng phim đương đại những năm qua chứng kiến sự lên ngôi của cái tên Christopher Nolan, được biết tới như một trong những đạo diễn thiên tài với khả năng tạo ra siêu phẩm bạc tỉ chất lượng.",
+        "like": 3,
+        "comment": 0
+      },
+      {
+        "image": "tiec-trang-mau-chinh-thuc-can-moc-100-ty-chi-sau-2-tuan-cong-chieu-16043752411629.png",
+        "title": "Tiệc Trăng Máu chính thức cán mốc 100 tỷ chỉ sau 2 tuần công chiếu",
+        "description": "Sau 2 tuần ra mắt, Tiệc Trăng Máu chính thức gia nhập câu lạc bộ phim điện ảnh đạt 100 tỷ đồng doanh thu phòng vé. Dàn ngôi sao “bạc tỷ” của phim cũng lần đầu tiên hội tụ đầy đủ trong một khung hình để ăn mừng thành tích ấn tượng của tác phẩm. ",
+        "like": 1,
+        "comment": 0
+      },
+      {
+        "image": "6-da-o-die-n-ti-do-lam-nen-thanh-cong-cua-nhu-ng-bom-ta-n-di-nh-da-m-nha-t-hollywood-15966023653637.jpg",
+        "title": "6 đạo diễn tỉ đô làm nên thành công của những bom tấn đình đám nhất Hollywood",
+        "description": "Hollywood luôn yêu thích những dự án điện ảnh với tiềm năng trở thành bom tấn. Trên con đường đó, đạo diễn là một trong những vị trí quan trọng nhất",
+        "like": 5,
+        "comment": 0
+      },
+      {
+        "image": "gai-gia-lam-chieu-v-nhung-cuoc-doi-vuong-gia-15965999467501.jpg",
+        "title": "Gái Già Lắm Chiêu V – Những cuộc đời vương giả",
+        "description": "Bộ phim qui tụ dàn diễn viên nổi tiếng nhiều thế hệ từ Bắc tới Nam, trong đó NSND Lê Khanh, NSND Hồng Vân sẽ tái hợp và đóng cùng nữ diễn viên trẻ",
+        "like": 0,
+        "comment": 0
+      },
+      {
+        "smallNewList": [
+          {
+            "image": "kaity-nguyen-tro-thanh-my-nhan-moi-cua-vu-tru-gai-gia-lam-chieu-15959988694730.jpg",
+            "title": "Kaity Nguyễn trở thành mỹ nhân mới của vũ trụ Gái Già Lắm Chiêu",
+            "description": " ",
+            "like": 0,
+            "comment": 0
+          },
+          {
+            "image": "5-ly-do-khien-ban-khong-the-bo-qua-bo-phim-cau-be-nguoi-go-pinocchio-15959331601790.jpg ",
+            "title": "5 lý do khiến bạn không thể bỏ qua bộ phim Cậu Bé Người Gỗ Pinocchio",
+            "description": " ",
+            "like": 0,
+            "comment": 0
+          },
+          {
+            "image": "tenet-cong-bo-ngay-khoi-chieu-chinh-thuc-tai-viet-nam-15959320275248.jpg",
+            "title": "TENET công bố ngày khởi chiếu chính thức tại Việt Nam",
+            "description": " ",
+            "like": 0,
+            "comment": 0
+          },
+          {
+            "image": "khi-phu-nu-khong-con-o-the-tron-chay-cua-nan-nhan-15943684395106.jpg",
+            "title": "Khi phụ nữ không còn ở thế trốn chạy của nạn nhân",
+            "description": "",
+            "like": 0,
+            "comment": 0
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "review",
+    "nameTab": "review",
+    "newsList": [
+      {
+        "image": "review-tan-tich-quy-am-relic-ba-the-he-va-moi-lien-ket-15965255784224.jpg",
+        "title": "Review: Tàn Tích Quỷ Ám (Relic) - Ba thế hệ và mối liên kết",
+        "description": "Điểm nhấn của phim kinh dị năm 2020 chính là Tàn Tích Quỷ Ám",
+        "like": 0,
+        "comment": 0
+      },
+      {
+        "image": "review-dinh-thu-oan-khuat-ghost-of-war-15965120886610.jpg",
+        "title": "Review: Dinh Thự Oan Khuất (Ghost Of War)",
+        "description": "Tuy là một bộ phim có chất lượng tốt, nhưng có vẻ Dinh Thự Oan Khuất vẫn chưa đủ để đem khán giả trở lại phòng vé",
+        "like": 0,
+        "comment": 0
+      },
+      {
+        "image": "blackkklansman-coc-nuoc-lanh-de-nguoi-my-thuc-tinh-15910862294165.png",
+        "title": "‘BlacKkKlansman’ - cốc nước lạnh để người Mỹ thức tỉnh",
+        "description": " Tác phẩm nhận đề cử Phim truyện xuất sắc tại Oscar 2019 của đạo diễn Spike Lee là một lát cắt nữa về nạn phân biệt chủng tộc - nỗi đau gây nhức nhối nước Mỹ cho tới tận hôm nay.",
+        "like": 0,
+        "comment": 0
+      },
+      {
+        "image": "american-sniper-chinh-nghia-hay-phi-nghia-15905660338111.png",
+        "title": "American Sniper - Chính nghĩa hay phi nghĩa?",
+        "description": " American Sniper khắc họa một tay súng bắn tỉa “huyền thoại” của Hải quân Mỹ với 4 lần tham chiến ở Trung Đông. Câu chuyện phim chậm rãi đưa người xem qua từng thời khắc khác nhau của Kyle, từ thửa nhỏ, thiếu niên, rồi gia nhập quân đội, rồi tham chiến. Từng khoảnh khắc bắt đầu nhẹ nhàng...",
+        "like": 0,
+        "comment": 0
+      },
+      {
+        "smallNewList": [
+          {
+            "image": "review-spider-man-into-the-spider-vesre-15886520889426.jpg",
+            "title": "Review: Spider-Man: Into The Spider-Vesre",
+            "description": " ",
+            "like": 0,
+            "comment": 0
+          },
+          {
+            "image": "covid-19-la-ban-chinh-thuc-cua-mev-1-phim-contagion-2011-15843496198482.jpg",
+            "title": "COVID-19 là bản chính thức của MEV-1 phim contagion (2011)",
+            "description": " ",
+            "like": 0,
+            "comment": 0
+          },
+          {
+            "image": "review-sieu-ve-si-so-vo-giai-cuu-tong-thong-chua-bao-gio-lay-loi-va-hai-huoc-den-the-15840925506832.jpg",
+            "title": "[Review] Siêu Vệ Sĩ Sợ Vợ - Giải cứu Tổng thống chưa bao giờ lầy lội và hài hước đến thế",
+            "description": " ",
+            "like": 0,
+            "comment": 0
+          },
+          {
+            "image": "review-bloodshot-mo-man-an-tuong-cho-vu-tru-sieu-anh-hung-valiant-15840731141389.jpg",
+            "title": "[Review] Bloodshot - Mở màn ấn tượng cho Vũ trụ Siêu anh hùng Valiant",
+            "description": " ",
+            "like": 0,
+            "comment": 0
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "khuyen-mai",
+    "nameTab": "khuyen-mai",
+    "newsList": [
+      {
+        "image": "bhd-59k-ve-ca-tuan-16045659414321.jpg",
+        "title": "BHD 59K/VÉ CẢ TUẦN !!!",
+        "description": "Tận hưởng Ưu Đãi lên đến 3 VÉ BHD Star mỗi tuần chỉ với giá 59k/vé khi mua vé trên TIX hoặc Mục Vé Phim trên ZaloPay.",
+        "like": 1,
+        "comment": 0
+      },
+      {
+        "image": "tix-1k-ve-ngai-chi-gia-ve-16045662877511.jpg",
+        "title": "TIX 1K/VÉ NGẠI CHI GIÁ VÉ",
+        "description": "Đồng giá 1k/vé cả tuần tất cả các rạp trên TIX + Nhận thêm 02 voucher thanh toán ZaloPay thả ga",
+        "like": 0,
+        "comment": 0
+      },
+      {
+        "image": "dong-gia-1k-ve-khi-mua-ve-qua-tix-16010092946804.png",
+        "title": "ĐỒNG GIÁ 1K/VÉ KHI MUA VÉ QUA TIX",
+        "description": "Hành trình tìm Ròm và Phúc chỉ với 1k cả tuần + nhận thêm 02 voucher khi đặt vé qua TIX.",
+        "like": 4,
+        "comment": 0
+      },
+      {
+        "image": "beta-cineplex-tro-lai-voi-hang-loat-uu-dai-lon-15889409277632.jpg",
+        "title": "BHD STAR VÉ CHỈ 59.000Đ CẢ TUẦN!",
+        "description": "Tận hưởng Ưu Đãi lên đến 3 VÉ BHD Star mỗi tuần chỉ với giá 59k/vé khi mua vé trên TIX và thanh toán bằng ZaloPay hoặc Mục Vé Phim trên ZaloPay.",
+        "like": 0,
+        "comment": 0
+      },
+      {
+        "smallNewList": [
+          {
+            "image": "beta-cineplex-tro-lai-voi-hang-loat-uu-dai-lon-15889408112010.png",
+            "title": "Beta Cineplex trở lại với hàng loạt ưu đãi lớn",
+            "description": " ",
+            "like": 0,
+            "comment": 0
+          },
+          {
+            "image": "123phim-thu-6-khong-den-toi-uu-dai-huy-diet-11k-ve-anh-trai-yeu-quai-15746757294099.jpg",
+            "title": "[123Phim] Thứ 6 Không Đen Tối -  Ưu đãi huỷ diệt 11k/vé Anh Trai Yêu Quái",
+            "description": " ",
+            "like": 0,
+            "comment": 0
+          },
+          {
+            "image": "123phim-nhap-ma-psm30k-giam-ngay-30k-khi-dat-ve-phap-su-mu-ai-chet-gio-tay-15729439018211.jpg",
+            "title": "[123Phim] NHẬP MÃ 'PSM30K' - Giảm ngay 30k khi đặt vé Pháp Sư Mù: Ai Chết Giơ Tay",
+            "description": " ",
+            "like": 0,
+            "comment": 0
+          },
+          {
+            "image": "mega-gs-mot-doa-hoa-thay-ngan-loi-yeu-15713106082164.jpg",
+            "title": "[Mega GS] Một đoá hoa thay ngàn lời yêu",
+            "description": " ",
+            "like": 0,
+            "comment": 0
+          }
+        ]
+      }
+    ]
+  }
+]

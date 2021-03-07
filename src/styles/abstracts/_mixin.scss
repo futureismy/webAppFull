@@ -1,0 +1,124 @@
+@mixin text($color, $fs, $fw) {
+  color: $color;
+  font-size: $fs;
+  font-weight: $fw;
+}
+
+@mixin list-default {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+@mixin bd-radius($width) {
+  border-radius: $width;
+  -webkit-border-radius: $width;
+  -moz-border-radius: $width;
+  -ms-border-radius: $width;
+  -o-border-radius: $width;
+}
+
+@mixin transition-all($prop: all, $time: 0.4s, $effect: ease-in-out) {
+  transition: $prop $time $effect;
+  -webkit-transition: $prop $time $effect;
+  -moz-transition: $prop $time $effect;
+  -ms-transition: $prop $time $effect;
+  -o-transition: $prop $time $effect;
+}
+
+@mixin buttonCustom(
+  $bg: color("primary"),
+  $color: color("white"),
+  $bd-radius: 4px,
+  $padding: spacing(1, 1.5),
+  $text-trans: uppercase,
+  $outline: none,
+  $border: none
+) {
+  background-color: $bg;
+  color: $color;
+  @include bd-radius($bd-radius);
+  padding: $padding;
+  outline: $color;
+  border: $color;
+  text-transform: $text-trans;
+  @include transition-all;
+}
+
+@mixin transform($value) {
+  transform: $value;
+  -webkit-transform: $value;
+  -moz-transform: $value;
+  -ms-transform: $value;
+  -o-transform: $value;
+}
+
+@mixin animation($value) {
+  animation: $value;
+  -webkit-animation: $value;
+}
+@mixin animation-transform($effectName, $value1, $value2) {
+  @keyframes #{$effectName} {
+    0% {
+      @include transform($value1);
+    }
+    100% {
+      @include transform($value2);
+    }
+  }
+}
+@mixin animation-opacity($effectName, $value1, $value2) {
+  @keyframes #{$effectName} {
+    0% {
+      opacity: $value1;
+    }
+    100% {
+      opacity: $value2;
+    }
+  }
+}
+@mixin animation-rotate3d($effectName, $value1, $value2, $value3, $value4) {
+  @keyframes #{$effectName} {
+    from {
+      opacity: 1;
+      @include transform($value1);
+    }
+    10%,
+    30%,
+    50%,
+    70%,
+    90% {
+      @include transform($value2);
+    }
+    20%,
+    40%,
+    60%,
+    80% {
+      @include transform($value3);
+    }
+    to {
+      opacity: 0;
+      @include transform($value4);
+    }
+  }
+}
+
+@mixin MediaQuery($type) {
+  @if ($type == $xs) {
+    @media screen and (max-width: $xs) {
+      @content;
+    }
+  } @else if($type == $sm) {
+    @media screen and (max-width: $sm) {
+      @content;
+    }
+  } @else if($type == $md) {
+    @media screen and (max-width: $md) {
+      @content;
+    }
+  } @else if($type == $lg) {
+    @media screen and (max-width: $lg) {
+      @content;
+    }
+  }
+}

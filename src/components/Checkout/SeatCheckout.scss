@@ -1,0 +1,134 @@
+@import "../../styles/index.scss";
+.SeatCheckout {
+  margin-top: spacing(1);
+
+  &__topContent {
+    display: grid;
+    grid-template-columns: 75% 25%;
+    p {
+      margin-bottom: 10px;
+    }
+    &__leftTitle {
+      display: flex;
+      .logoCinema {
+        width: 50px;
+        height: 50px;
+        margin-right: 13px;
+        .logo {
+          width: 100%;
+          vertical-align: middle;
+        }
+      }
+      .contentCinema {
+        .address {
+          margin-top: 1px;
+        }
+        .hour {
+          line-height: 5px;
+          font-size: 14px;
+          color: #9b9b9b;
+        }
+      }
+    }
+    &__rightTitle {
+      width: 120px;
+      margin: 0 auto;
+      .info1 {
+        line-height: 1.2;
+        font-size: 12px;
+        color: #9b9b9b;
+        text-align: center;
+        margin-bottom: 10px;
+      }
+      // &__setTime{
+      //   text-align: center;
+      //   @include text(red, $h1, $fwMedium);
+      // }
+      .info2 {
+        text-align: center;
+        @include text(red, $h1, $fwMedium);
+      }
+    }
+  }
+  &__seatMap {
+    margin-top: 10px;
+    &__room {
+      margin: auto;
+      text-align: center;
+      .listSeat {
+        margin-top: -40px;
+      }
+    }
+  }
+}
+.namescreen {
+  img {
+    max-width: 800px;
+  }
+}
+.listSeat {
+  max-width: 550px;
+
+  &__title {
+    padding-top: 5px;
+    width: 15%;
+    margin-top: spacing(0.2);
+    h4 {
+      height: 30px;
+      margin-bottom: 8px;
+      @include text(color("darkergrey"), $h1, $fwMedium);
+    }
+  }
+  &__content {
+    width: 85%;
+  }
+  &__description {
+    width: 550px;
+    cursor: unset;
+    p {
+      @include text(color("lightgrey"), $title3, $fwMedium);
+    }
+  }
+}
+
+@include MediaQuery($md) {
+  .namescreen {
+    img {
+      max-width: 700px;
+    }
+  }
+}
+
+@include MediaQuery($sm) {
+  .namescreen {
+    img {
+      max-width: 550px;
+    }
+  }
+}
+
+@include MediaQuery($xs) {
+  .SeatCheckout {
+    &__topContent {
+      padding: 0 5px;
+    }
+  }
+  .namescreen {
+    img {
+      max-width: 400px;
+    }
+  }
+  .listSeat {
+    max-width: 400px;
+    &__title {
+      width: 10%;
+    }
+    &__content {
+      width: 90%;
+    }
+    &__description {
+      width: 400px;
+      cursor: unset;
+    }
+  }
+}

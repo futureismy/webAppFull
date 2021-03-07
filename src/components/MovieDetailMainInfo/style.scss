@@ -1,0 +1,199 @@
+@import "../../styles/index.scss";
+@import "node_modules/react-modal-video/scss/modal-video.scss";
+.movie__detail__main__top {
+  width: 870px;
+
+  justify-content: space-between;
+  &__right {
+    display: flex;
+    align-items: center;
+
+    &__poster {
+      position: relative;
+
+      img {
+        width: 218px;
+        height: 315px;
+        border-radius: 5px;
+
+        left: 0;
+      }
+      &__icon {
+        i {
+          transition: all 0.3s;
+          position: absolute;
+          font-size: 20px;
+          left: 50%;
+          top: 50%;
+          transform: translateX(-50%) translateY(-50%);
+          padding: spacing(3);
+          background-color: rgba(color("blackgrey"), $alpha: 0.2);
+          border-radius: 50%;
+          border: 2px solid color("white");
+          display: none;
+        }
+        color: color("white");
+      }
+
+      &:hover &__icon i {
+        display: block;
+        cursor: pointer;
+      }
+      // background-image: url("https://s3img.vcdn.vn/mobile/123phim/2020/10/tiec-trang-mau-blood-moon-party-16016226514166_215x318.png");
+    }
+    .modal-video-close-btn {
+      position: absolute;
+      top: -20px;
+      right: -20px;
+      opacity: 1;
+      width: 30px;
+      height: 30px;
+      outline: none;
+      @include bd-radius(50%);
+      border: 1px solid color("white");
+      text-align: center;
+      z-index: 2;
+      &::before,
+      &::after {
+        width: 50%;
+        left: 20%;
+        margin-top: 0;
+      }
+    }
+
+    &__content {
+      width: 350px;
+      span {
+        @include text(color("lighterwhite"), $body, $fwMedium);
+        padding: spacing(0) spacing(0.5);
+        background-color: color("primary");
+        border-radius: 3px;
+      }
+      p {
+        @include text(color("lighterwhite"), $title3, $fwRegular);
+        margin: 0;
+      }
+      h3 {
+        @include text(color("lighterwhite"), $h2, $fwMedium);
+      }
+      button {
+        @include buttonCustom;
+        text-transform: unset;
+        @include text(color("lighterwhite"), $body, $fwMedium);
+        &:hover {
+          background-color: color("secondary");
+        }
+      }
+    }
+    &__box {
+      position: relative;
+
+      text-align: center;
+      display: flex;
+      justify-content: center;
+
+      flex-direction: column;
+      &__percent {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        circle {
+          fill: none;
+          stroke-width: 8;
+          stroke: color("black");
+          transform: translate(5px, 5px);
+          stroke-dasharray: 345;
+          stroke-dashoffset: 345;
+          &:nth-child(1) {
+            stroke-dashoffset: 0;
+            stroke: color("blackgrey");
+          }
+          &:nth-child(2) {
+            // stroke-dashoffset: calc(345 - (345 * 9.3 * 10) / 100);
+            // stroke: color("green");
+          }
+        }
+      }
+
+      &__number {
+        position: absolute;
+        right: 4px;
+        top: 45%;
+        transform: translateY(-50%);
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        // color: #999;
+        // font-size: 53px;
+        // font-weight: 700;
+        @include text(color("white"), 53px, 500);
+      }
+      &__star {
+        @include text(color("primary"), $h2, 500);
+        margin-top: spacing(16);
+      }
+      p {
+        @include text(color("lighterwhite"), $title3, $fwRegular);
+        margin: spacing(0.5) spacing(0);
+      }
+    }
+  }
+}
+
+// reponsive
+@include MediaQuery($lg) {
+  .movie__detail__main__top {
+    height: 120%;
+    
+  }
+  .movie__detail__main__top__right__box__number{
+    top:48%;
+  }
+  
+}
+@include MediaQuery($sm) {
+  .movie__detail__main__top {
+    display: block;
+    position: relative;
+
+    &__right {
+      &__poster {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        &__image {
+          display: none;
+        }
+        &__icon {
+          position: relative;
+
+          left: 50%;
+          top: 50%;
+          transform: translateX(-50%) translateY(-50%);
+        }
+      }
+
+      &__content {
+        width: 100%;
+        height: 100%;
+        position: relative;
+        left: 0;
+        top: 95%;
+
+        span {
+          display: none;
+        }
+        button {
+          display: none;
+        }
+      }
+      &__box {
+        display: none;
+      }
+    }
+  }
+}

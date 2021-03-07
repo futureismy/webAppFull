@@ -1,0 +1,121 @@
+.btn-default {
+  @include buttonCustom;
+}
+
+.btn-play {
+  a {
+    color: color("white");
+    border: 2px solid color("white");
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    font-size: fontSize(2.1);
+    width: 72px;
+    height: 72px;
+    line-height: 72px;
+    text-align: center;
+    @include bd-radius(72px);
+    background-color: rgba(74, 74, 74, 0.2);
+    cursor: pointer;
+    &:hover {
+      color: color("white");
+      @include transform(scale(0.95));
+      text-decoration: none;
+    }
+  }
+}
+
+.btn-age {
+  display: inline-block;
+  min-width: 33px;
+  @include bd-radius(4px);
+  background-color: color("primary");
+  color: color("white");
+  font-size: $title3;
+  text-align: center;
+  margin-right: spacing(0.5);
+  padding: spacing(0.3, 1);
+}
+
+.btn-detail {
+  background-color: color("transparent");
+  color: color("primary");
+  font-size: $title1;
+  border: none;
+  outline: none;
+  padding: 0;
+  margin: 0;
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+.progress {
+  width: 130px;
+  height: 130px;
+  line-height: 130px;
+  margin: 0 auto;
+  position: relative;
+  background-color: transparent;
+
+  &::after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 8px solid rgba(color("black"), 0.4);
+    @include bd-radius(50%);
+  }
+
+  > span {
+    position: absolute;
+    top: 0;
+    width: 50%;
+    height: 100%;
+    overflow: hidden;
+    z-index: 1;
+  }
+
+  &-bar {
+    width: 100%;
+    height: 100%;
+    background: none;
+    border: 8px solid color("green");
+    position: absolute;
+    top: 0;
+    border-left: 0;
+    border-top-right-radius: 80px;
+    border-bottom-right-radius: 80px;
+    transform-origin: center left;
+  }
+
+  &-left {
+    left: 0;
+
+    .progress-bar {
+      left: 100%;
+      @include transform(rotate(90deg));
+    }
+  }
+
+  &-right {
+    right: 0;
+
+    .progress-bar {
+      right: 0;
+      @include transform(rotate(0deg));
+    }
+  }
+
+  &-value {
+    background-color: rgba(color("black"), 0.4);
+    color: color("white");
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    font-size: fontSize(1.5);
+    line-height: 130px;
+    text-align: center;
+  }
+}

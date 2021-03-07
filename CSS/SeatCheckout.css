@@ -1,0 +1,72 @@
+.SeatCheckout {
+  grid-area: SeatCheckout;
+  width: 900px;
+  margin: 0 auto;
+  margin-top: 10px;
+  padding-top: 20px;
+}
+
+.SeatCheckout__topContent {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 75% 25%;
+      grid-template-columns: 75% 25%;
+}
+
+.SeatCheckout__topContent p {
+  margin-bottom: 10px;
+}
+
+.SeatCheckout__topContent__leftTitle {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.SeatCheckout__topContent__leftTitle .logoCinema {
+  width: 50px;
+  height: 50px;
+  margin-right: 13px;
+}
+
+.SeatCheckout__topContent__leftTitle .logoCinema .logo {
+  width: 100%;
+  vertical-align: middle;
+}
+
+.SeatCheckout__topContent__leftTitle .contentCinema .address {
+  margin-top: 1px;
+}
+
+.SeatCheckout__topContent__leftTitle .contentCinema .hour {
+  line-height: 5px;
+  font-size: 14px;
+  color: #9b9b9b;
+}
+
+.SeatCheckout__topContent__rightTitle {
+  width: 120px;
+  margin: 0 auto;
+}
+
+.SeatCheckout__topContent__rightTitle .info1 {
+  line-height: 1.2;
+  font-size: 12px;
+  color: #9b9b9b;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.SeatCheckout__seatMap {
+  margin-top: 10px;
+}
+
+.SeatCheckout__seatMap__room {
+  margin: auto;
+  text-align: center;
+}
+
+.SeatCheckout__seatMap__room .listSeat {
+  margin-top: -40px;
+}
+/*# sourceMappingURL=SeatCheckout.css.map */

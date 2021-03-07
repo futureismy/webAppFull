@@ -1,0 +1,69 @@
+@import "../../styles/index.scss";
+#appstore {
+  background-image: url(../../assets/images/appstore/backapp.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  min-height: 700px;
+  padding: spacing(12) 0 spacing(8);
+  .appstore {
+    max-width: 940px;
+    margin: auto;
+    &__content {
+      color: color("white");
+      p {
+        padding-top: spacing(1);
+        margin-bottom: spacing(1);
+        color: color("white");
+        .link-app {
+          color: color("white");
+          text-decoration: underline;
+          margin: spacing(0, 0.5);
+        }
+      }
+    }
+    &__textlarge {
+      font-size: fontSize(3);
+      font-weight: $fwBold;
+      margin-bottom: spacing(1);
+    }
+    &__textsmall {
+      font-size: $body;
+      margin-bottom: spacing(1);
+    }
+    .phone-img {
+      display: block;
+      max-width: 100%;
+      padding: 0 28%;
+      height: auto;
+    }
+
+    &__slider {
+      background-image: url(../../assets/images/appstore/mobile.png);
+      background-repeat: no-repeat;
+      background-size: cover;
+      margin: 0 auto;
+      max-width: 210px;
+      @include bd-radius(20px);
+      overflow: hidden;
+    }
+  }
+}
+
+@include MediaQuery($md) {
+  #appstore {
+    padding-top: spacing(7);
+    .appstore {
+      &__content {
+        margin-bottom: spacing(4);
+      }
+    }
+  }
+}
+
+@include MediaQuery($sm) {
+  .appstore {
+    &__content {
+      text-align: center;
+    }
+  }
+}

@@ -1,0 +1,101 @@
+@import "../../styles/index.scss";
+
+.list__seat {
+  display: inline-block;
+  margin: spacing(0.5) spacing(0.2);
+
+  &__item {
+    border: 3px solid #3e515d;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+    border-top-left-radius: 2px;
+    border-top-right-radius: 2px;
+    border-top: none;
+    padding: 0 1px 0 1px;
+    display: inline-block;
+    cursor: pointer;
+    &__active {
+      border: 3px solid yellowgreen;
+      border-bottom-left-radius: 8px;
+      border-bottom-right-radius: 8px;
+      border-top-left-radius: 2px;
+      border-top-right-radius: 2px;
+      border-top: none;
+      &:hover {
+        cursor: pointer;
+      }
+      button {
+        background-color: yellowgreen;
+        cursor: pointer;
+        span {
+          visibility: unset;
+        }
+      }
+    }
+    &__selected {
+      border: 3px solid pink;
+      border-bottom-left-radius: 8px;
+      border-bottom-right-radius: 8px;
+      border-top-left-radius: 2px;
+      border-top-right-radius: 2px;
+      border-top: none;
+
+      button:disabled {
+        background-color: pink;
+      }
+      button {
+        background-color: pink;
+      }
+    }
+    &__vip {
+      border: 3px solid #f7b500;
+      border-bottom-left-radius: 8px;
+      border-bottom-right-radius: 8px;
+      border-top-left-radius: 2px;
+      border-top-right-radius: 2px;
+      border-top: none;
+      cursor: pointer;
+      &:hover {
+        cursor: pointer;
+      }
+      button {
+        background-color: #f7b500;
+        cursor: pointer;
+      }
+    }
+
+    &__btn {
+      position: relative;
+      bottom: 2px;
+      border-radius: 4px;
+      background-color: #3e515d;
+      outline: none !important;
+      border: none;
+      width: 26px;
+      text-align: center;
+
+      span {
+        display: flex;
+        justify-content: center;
+        @include text(color("darkergrey"), $title3, $fwRegular);
+        padding: 1px 0;
+        visibility: hidden;
+      }
+    }
+    &__cursor {
+      cursor: unset;
+      button {
+        cursor: unset !important;
+      }
+    }
+  }
+}
+
+@include MediaQuery($xs) {
+  button.list__seat__item__btn {
+    width: 18px;
+    span {
+      font-size: $base;
+    }
+  }
+}

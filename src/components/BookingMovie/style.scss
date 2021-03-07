@@ -1,0 +1,146 @@
+@import "../../styles/index.scss";
+
+#booking__movie {
+  position: relative;
+  z-index: 99;
+
+  .booking__movie {
+    background-color: color("white");
+    display: block;
+    height: 80px;
+    width: 100%;
+    padding: spacing(1.5);
+    position: absolute;
+    top: initial;
+    left: 50%;
+    bottom: -40px;
+    @include transform(translateX(-50%));
+    @include bd-radius(5px);
+    box-shadow: 0 0 10px rgba(color("black"), 0.3);
+    z-index: 2;
+    .dropdown-menu {
+      will-change: unset;
+    }
+    &__name {
+      .options-container {
+        min-width: 450px;
+      }
+    }
+
+    &__theater {
+      .options-container {
+        min-width: 250px;
+      }
+    }
+
+    &__item {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      border-right: 1px solid color("lightwhite");
+      position: relative;
+      margin: 0 -15px;
+
+      .options-container {
+        top: 100%;
+        background: color("white");
+        color: color("black");
+        z-index: 1000;
+        @include transition-all($time: 0.2s);
+        @include bd-radius(8px);
+        border-top: 1px solid rgba(color("black"), 0.3);
+        overflow: hidden;
+        overflow-y: scroll;
+        order: 1;
+
+        &.small-container {
+          overflow-y: hidden;
+        }
+      }
+      .option {
+        cursor: pointer;
+        padding: spacing(0.5, 2);
+        font-size: $title3;
+        font-weight: $fwRegular;
+
+        &:hover {
+          background-color: #60c5ef;
+          color: color("white");
+        }
+        .radio {
+          display: none;
+        }
+      }
+
+      .selected {
+        background: color("white");
+        @include bd-radius(8px);
+        color: color("black");
+        position: relative;
+        width: 100%;
+        cursor: pointer;
+        padding: spacing(1.5) 0 spacing(1.5) spacing(1.5);
+
+        &.dropdown-toggle {
+          text-align: left;
+          &::after {
+            content: "";
+            position: absolute;
+            top: 50%;
+            right: 0;
+            width: 20px;
+            height: 20px;
+            background-image: url(../../assets/images/logos/dropdown-icon.png);
+            background-repeat: no-repeat;
+            transition: all 0.4s;
+            border: none;
+          }
+        }
+      }
+
+      label {
+        cursor: pointer;
+      }
+
+      .btn-default {
+        background-color: color("blackgrey");
+
+        &.active {
+          background-color: color("primary");
+        }
+      }
+    }
+
+    &__date {
+      line-height: 20px;
+
+      p:nth-child(2) {
+        color: color("lightgrey");
+        font-size: $title1;
+        padding-top: spacing(0.2);
+      }
+    }
+
+    &__datepick {
+      .dropdown__selected {
+        p:first-child {
+          display: none;
+        }
+      }
+    }
+
+    &__book {
+      border-right: none;
+      justify-content: flex-end;
+    }
+  }
+}
+
+@include MediaQuery($lg) {
+  #booking__movie {
+    .booking__movie {
+      display: none;
+    }
+  }
+}

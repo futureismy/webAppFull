@@ -1,0 +1,45 @@
+@import "../../styles/index.scss";
+
+.change__password{
+    background-color: #ddbea9;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    &__form{
+        width: 30%;
+        &__title{
+            @include text(#9c6644, $h2, $fwMedium);
+            text-transform: uppercase;
+            margin-bottom: spacing(3);
+        }
+        label{
+            @include text(#9c6644, $body, $fwMedium);
+        }
+
+        button.btn {
+            background-color: #774936;
+            @include text(color('lighterwhite'), $body, $fwMedium);
+         
+            &:hover{
+                background-color: #c38e70;
+            }
+        }
+    }
+}
+@include MediaQuery($lg) {
+    .change__password{
+        &__form{
+           width: 50%;
+       }
+    }
+  }
+  @include MediaQuery($sm) {
+    .change__password{
+        &__form{
+           width: 80%;
+       }
+    }
+  }

@@ -1,0 +1,141 @@
+@import "../../styles/index.scss";
+#showtime {
+  padding-top: spacing(10);
+  .nav {
+    justify-content: center;
+    margin-top: 0;
+    margin-bottom: spacing(3);
+  }
+  .nav-tabs {
+    border-bottom: none;
+    .nav-item {
+      color: color("black");
+      font-weight: $fwMedium;
+    }
+    .nav-link {
+      border: none;
+      background-color: transparent;
+      color: color("black");
+      line-height: 30px;
+      font-size: fontSize(3);
+      @include transition-all($time: 0.2s);
+      &:hover {
+        font-size: fontSize(2.5);
+      }
+    }
+  }
+  .nav-tabs .nav-link.active,
+  .nav-tabs .nav-item.show .nav-link {
+    border: none;
+    color: color("secondary");
+    font-size: fontSize(3);
+  }
+  .showtime {
+    &-slider {
+      .slick-prev,
+      .slick-next {
+        top: 45%;
+        width: 50px;
+        height: 60px;
+        z-index: 3;
+        &::before {
+          display: none;
+        }
+      }
+      .slick-next {
+        right: -50px;
+      }
+
+      .slick-prev {
+        left: -50px;
+      }
+    }
+  }
+  .modal-video-close-btn {
+    position: absolute;
+    top: -20px;
+    right: -20px;
+    opacity: 1;
+    width: 30px;
+    height: 30px;
+    outline: none;
+    @include bd-radius(50%);
+    border: 1px solid color("white");
+    text-align: center;
+    z-index: 2;
+    &::before,
+    &::after {
+      width: 50%;
+      left: 20%;
+      margin-top: 0;
+    }
+  }
+}
+
+@media screen and (min-width: 576px) {
+  .showtime {
+    &__btn {
+      display: none;
+    }
+  }
+}
+@media screen and (min-width: 993px) and(max-width: 1058px) {
+  .showtime {
+    &-slider {
+      .slick-prev,
+      .slick-next {
+        top: 45%;
+        width: 40px !important;
+        height: 45px !important;
+      }
+      .slick-next {
+        right: -20px !important;
+      }
+
+      .slick-prev {
+        left: -20px !important;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 578px) and(max-width: 800px) {
+  .showtime {
+    &-slider {
+      .slick-prev,
+      .slick-next {
+        top: 45%;
+        width: 40px !important;
+        height: 45px !important;
+      }
+      .slick-next {
+        right: -20px !important;
+      }
+
+      .slick-prev {
+        left: -20px !important;
+      }
+    }
+  }
+}
+
+@include MediaQuery($xs) {
+  .showtime {
+    &__btn {
+      display: block;
+      text-align: center;
+      margin: spacing(2) 0 spacing(3) 0;
+      .btn-default {
+        background-color: color("lightwhite");
+        border: 1px solid color("lightgrey");
+        color: #9b9b9b;
+        &:hover {
+          background-color: color("primary");
+          border-color: color("primary");
+          color: color("white");
+          text-decoration: none;
+        }
+      }
+    }
+  }
+}
